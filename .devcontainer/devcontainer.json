@@ -1,12 +1,13 @@
 {
-	"name": "helm-microk8s",
+	"name": "kubectl-helm-minikube-argo-cd-kind",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
     	"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
-		"ghcr.io/devcontainers-extra/features/argo-cd:1": {}
+		"ghcr.io/devcontainers-extra/features/argo-cd:1": {},
+		"ghcr.io/mpriscella/features/kind:1": {}
   	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
