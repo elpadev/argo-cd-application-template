@@ -5,9 +5,16 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-    	"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
-		"ghcr.io/devcontainers-extra/features/argo-cd:1": {},
-		"ghcr.io/mpriscella/features/kind:1": {}
+    	"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {
+			"version": "2.0.16"
+		},
+		"ghcr.io/devcontainers-extra/features/argo-cd:1": {
+			"version": "1.1.0"
+		},
+		"ghcr.io/mpriscella/features/kind:1": {
+			"version": "v0.29.0"
+		}
+
   	}
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
