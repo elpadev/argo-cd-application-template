@@ -22,7 +22,7 @@
 	// "forwardPorts": [],
 
 	// Uncomment the next line to run commands after the container is created.
-	"postCreateCommand": "minikube start"
+	"postCreateCommand": "bash postCreate.sh"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
