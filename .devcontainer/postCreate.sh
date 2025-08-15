@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
+# This script is executed after the container is created.
+
 set -euo pipefail
 
-# This script is executed after the container is created.
 
 # Start minikube
 minikube start --driver=docker
