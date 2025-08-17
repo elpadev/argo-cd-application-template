@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: my-project
+  namespace: argocd
+spec:
+  description: "Basic project for my applications"
+  
+  # Git repositories that applications can use
+  sourceRepos:
+  - 'https://github.com/elpadev/argo-cd-application-template'
+  # - '*'  # Allow all repositories
+  
+  # Where applications can be deployed
+  destinations:
+  - namespace: '*'  # Any namespace
+    server: https://kubernetes.default.svc  # Local cluster
+  
+  # What cluster resources can be created
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  
+  # Who can access the applications in this project
+  # Basic role for developers
+  roles:
+  - name: developer
+    policies:
+    - p, proj:my-project:developer, applications, *, my-project/*, allow # Allow all actions on applications in this project
+    groups:
+    - my-org:developers # ToDo
