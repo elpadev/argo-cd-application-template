@@ -7,7 +7,7 @@ spec:
   project: my-project
   source:
     repoURL: https://github.com/elpadev/argo-cd-application-template
-    targetRevision: feature/add-application-project-cr
+    targetRevision: HEAD
     path: deploy/helm/my-python-app
     helm:
       releaseName: my-python-app
