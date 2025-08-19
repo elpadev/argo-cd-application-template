@@ -9,7 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 # Copy application files
-COPY ./src /app
+COPY src /app
 
 # Install dependencies
 RUN pip install --no-cache-dir --upgrade pip \
