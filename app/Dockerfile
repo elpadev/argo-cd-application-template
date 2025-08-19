@@ -9,11 +9,11 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 # Copy application files
-COPY ./src /app
+COPY src /app
 
 # Install dependencies
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
 # Run the application
-CMD ["python", "app.py"]
+CMD ["python", "/app/main.py"]
